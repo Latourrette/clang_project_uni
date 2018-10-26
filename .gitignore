@@ -1,0 +1,76 @@
+# IntelliJ project files
+.idea
+*.iml
+out
+gen### C template
+# Prerequisites
+*.d
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
+
+cmake-build-debug/CMakeFiles/3.12.3/CompilerIdC/tmp/
+cmake-build-debug/CMakeFiles/CMakeTmp/CMakeCache.txt
+cmake-build-debug/CMakeFiles/CMakeTmp/CMakeFiles/CMakeDirectoryInformation.cmake
+cmake-build-debug/CMakeFiles/CMakeTmp/CMakeFiles/Makefile2
+cmake-build-debug/CMakeFiles/CMakeTmp/CMakeFiles/TargetDirectories.txt
+cmake-build-debug/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_fdc48.dir/DependInfo.cmake
+cmake-build-debug/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_fdc48.dir/build.make
+cmake-build-debug/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_fdc48.dir/cmake_clean.cmake
+cmake-build-debug/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_fdc48.dir/depend.make
+cmake-build-debug/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_fdc48.dir/flags.make
+cmake-build-debug/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_fdc48.dir/link.txt
+cmake-build-debug/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_fdc48.dir/progress.make
+cmake-build-debug/CMakeFiles/CMakeTmp/CMakeFiles/cmake.check_cache
+cmake-build-debug/CMakeFiles/CMakeTmp/CMakeFiles/progress.marks
+cmake-build-debug/CMakeFiles/CMakeTmp/CMakeLists.txt
+cmake-build-debug/CMakeFiles/CMakeTmp/Makefile
+cmake-build-debug/CMakeFiles/CMakeTmp/cmake_install.cmake
+
