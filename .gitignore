@@ -56,7 +56,7 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-cmake-build-debug/CMakeFiles/3.12.3/CompilerIdC/tmp/
+cmake-build-debug/
 cmake-build-debug/CMakeFiles/CMakeTmp/CMakeCache.txt
 cmake-build-debug/CMakeFiles/CMakeTmp/CMakeFiles/CMakeDirectoryInformation.cmake
 cmake-build-debug/CMakeFiles/CMakeTmp/CMakeFiles/Makefile2

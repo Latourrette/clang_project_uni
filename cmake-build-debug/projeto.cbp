@@ -76,6 +76,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/latourrette/Documents/lp1/projetolp1/functions.c">
+			<Option target="projeto"/>
+		</Unit>
+		<Unit filename="/home/latourrette/Documents/lp1/projetolp1/functions.h">
+			<Option target="projeto"/>
+		</Unit>
 		<Unit filename="/home/latourrette/Documents/lp1/projetolp1/main.c">
 			<Option target="projeto"/>
 		</Unit>
