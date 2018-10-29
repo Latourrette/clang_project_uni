@@ -177,6 +177,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/main.c.s
 .PHONY : main.c.s
 
+stringsort.o: stringsort.c.o
+
+.PHONY : stringsort.o
+
+# target to build an object file
+stringsort.c.o:
+	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/stringsort.c.o
+.PHONY : stringsort.c.o
+
+stringsort.i: stringsort.c.i
+
+.PHONY : stringsort.i
+
+# target to preprocess a source file
+stringsort.c.i:
+	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/stringsort.c.i
+.PHONY : stringsort.c.i
+
+stringsort.s: stringsort.c.s
+
+.PHONY : stringsort.s
+
+# target to generate assembly for a file
+stringsort.c.s:
+	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/stringsort.c.s
+.PHONY : stringsort.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +219,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... stringsort.o"
+	@echo "... stringsort.i"
+	@echo "... stringsort.s"
 .PHONY : help
 
 

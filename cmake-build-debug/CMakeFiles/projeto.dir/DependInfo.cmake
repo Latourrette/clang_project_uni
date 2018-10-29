@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/home/latourrette/Documents/lp1/projetolp1/functions.c" "/home/latourrette/Documents/lp1/projetolp1/cmake-build-debug/CMakeFiles/projeto.dir/functions.c.o"
   "/home/latourrette/Documents/lp1/projetolp1/main.c" "/home/latourrette/Documents/lp1/projetolp1/cmake-build-debug/CMakeFiles/projeto.dir/main.c.o"
+  "/home/latourrette/Documents/lp1/projetolp1/stringsort.c" "/home/latourrette/Documents/lp1/projetolp1/cmake-build-debug/CMakeFiles/projeto.dir/stringsort.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

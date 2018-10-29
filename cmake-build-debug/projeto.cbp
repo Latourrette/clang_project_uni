@@ -85,6 +85,12 @@
 		<Unit filename="/home/latourrette/Documents/lp1/projetolp1/main.c">
 			<Option target="projeto"/>
 		</Unit>
+		<Unit filename="/home/latourrette/Documents/lp1/projetolp1/stringsort.c">
+			<Option target="projeto"/>
+		</Unit>
+		<Unit filename="/home/latourrette/Documents/lp1/projetolp1/stringsort.h">
+			<Option target="projeto"/>
+		</Unit>
 		<Unit filename="/home/latourrette/Documents/lp1/projetolp1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/projeto.dir/main.c.o CMakeFiles/projeto.dir/functions.c.o  -o projeto 
+/usr/bin/cc -g   CMakeFiles/projeto.dir/main.c.o CMakeFiles/projeto.dir/functions.c.o CMakeFiles/projeto.dir/stringsort.c.o  -o projeto 

@@ -13,22 +13,21 @@ void printMatrix(char **matrix, int col, int row) {
     }
 }
 
-char **createManually(int col, int row) {
+void printBagOfWords(char **matrix, int col) {
+    for (int i = 0; i < col; i++) {
+        printf("[%s]", matrix[i]);
+        printf("\n");
+    }
+}
+
+char **generateWordSearch(int col, int row) {
     char **wordsearch = (char **) malloc(col * sizeof(char *));
-    for (int i = 0; i < col; i++)
+    for (int i = 0; i < col; i++) {
         wordsearch[i] = (char *) malloc((size_t) row++);
-
-    stpcpy(wordsearch[0], "JDCPCPXOAA");
-    stpcpy(wordsearch[1], "ZXVOVXFRVV");
-    stpcpy(wordsearch[2], "NDLEIRBIEA");
-    stpcpy(wordsearch[3], "YTRQOMOIIO");
-    stpcpy(wordsearch[4], "FZZAPAERTQ");
-    stpcpy(wordsearch[5], "XAUEOEOOTO");
-    stpcpy(wordsearch[6], "PORTUOAZLZ");
-    stpcpy(wordsearch[7], "CZNOQUPUOP");
-    stpcpy(wordsearch[8], "LXSBVXLNVQ");
-    stpcpy(wordsearch[9], "ZIVOOAFRAV");
-
+        for (int j = 0; j < row; j++) {
+            wordsearch[i][j] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[random() % 26];
+        }
+    }
     return wordsearch;
 }
 
@@ -56,14 +55,16 @@ char **readFromFile(int col, int row) {
         exit(1);
     }
 
-    for (int i = 0; i < col; i++)
+    for (int i = 0; i < col; i++) {
         fgets(wordsearch[i], BUFFER, f);
+    }
 
     fclose(f);
     return wordsearch;
 }
 
 char **readFromFileBagOfWords(int col, int row) {
+    char *aux = (char *) malloc(100);
     char **bagOfWords = (char **) malloc(col * sizeof(char *));
     for (int i = 0; i < col; i++)
         bagOfWords[i] = (char *) malloc((size_t) row++);
@@ -74,10 +75,41 @@ char **readFromFileBagOfWords(int col, int row) {
         exit(1);
     }
 
-    for (int i = 0; i < col; i++)
-        fgets(bagOfWords[i], BUFFER, f);
-
+    for (int i = 0; i < col; i++) {
+        fgets(aux, BUFFER, f);
+        strcpy(&aux[strlen(aux) - 1], "\0");
+        strcpy(bagOfWords[i], aux);
+    }
     fclose(f);
     return bagOfWords;
 }
 
+
+void createStringElementsArray(StringElementsArray *si, int N) {
+    si->N = N;
+    si->str = (char **) malloc(sizeof(char *) * N);
+    si->len = (int *) malloc(sizeof(int) * N);
+}
+
+void createStringElementsArrayAndFill(StringElementsArray *si, int N, char **strings) {
+    int i;
+    createStringElementsArray(si, N);
+    for (i = 0; i < N; i++) {
+        si->str[i] = (char*) malloc(strlen(strings[i]) + 1);
+        strcpy(si->str[i],strings[i]);
+        si->len[i] = (int) strlen(strings[i]);
+    }
+}
+
+void freeStringElementsArray(StringElementsArray *si) {
+    free(si->str);
+    free(si->len);
+}
+
+void printStringElementsArray(StringElementsArray *a) {
+    int i;
+    printf("\n-------------\nStringElementsArray (N=%d):\n", a->N);
+    for (i = 0; i < a->N; i++)
+        printf("\t%s\t(%d)\n", a->str[i], a->len[i]);
+    printf("-------------\n");
+}

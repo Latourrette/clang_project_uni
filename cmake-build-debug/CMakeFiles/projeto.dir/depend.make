@@ -6,4 +6,9 @@ CMakeFiles/projeto.dir/functions.c.o: ../functions.h
 
 CMakeFiles/projeto.dir/main.c.o: ../functions.h
 CMakeFiles/projeto.dir/main.c.o: ../main.c
+CMakeFiles/projeto.dir/main.c.o: ../stringsort.h
+
+CMakeFiles/projeto.dir/stringsort.c.o: ../functions.h
+CMakeFiles/projeto.dir/stringsort.c.o: ../stringsort.c
+CMakeFiles/projeto.dir/stringsort.c.o: ../stringsort.h
 

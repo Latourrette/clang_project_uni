@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/projeto.dir/main.c.o"
   "CMakeFiles/projeto.dir/functions.c.o"
+  "CMakeFiles/projeto.dir/stringsort.c.o"
   "projeto.pdb"
   "projeto"
 )
