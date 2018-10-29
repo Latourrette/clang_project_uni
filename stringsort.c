@@ -7,7 +7,7 @@
 
 void msdSortClient(StringElementsArray *a, StringElementsArray *aux) {
     for (int i = 0; i < a->N; i++) {
-        printf("Word[%d] = %s\n", i+1, a->str[i]);
+        printf("Word[%d] = %s\n", i + 1, a->str[i]);
     }
     msdSort(a, aux, 0, a->N - 1, 0);
     printf("\n-----------------\nList MSD Sorted:\n");
@@ -24,7 +24,8 @@ void msdSort(StringElementsArray *a, StringElementsArray *aux, int lo, int hi, i
     int i, r, j;
     int *count = malloc((R + 2) * sizeof(int));
 
-    if (hi <= lo) {
+    if (hi <= lo + CUTOFF) {
+        insertionSort(a);
         return;
     }
 
@@ -56,4 +57,29 @@ void msdSort(StringElementsArray *a, StringElementsArray *aux, int lo, int hi, i
     }
     free(count);
     freeStringElementsArray(aux);
+}
+
+void insertionSort(StringElementsArray *a) {
+    int aux;
+    char tmp[MAXSEARCH];
+
+    for (int i = 1; i < a->N; i++) {
+        int j = i;
+
+        while (j > 0 && strcmp(a->str[j - 1], a->str[j]) > 0) {
+            strncpy(tmp, a->str[j - 1], sizeof(tmp) - 1);
+            tmp[sizeof(tmp) - 1] = '\0';
+
+            strncpy(a->str[j - 1], a->str[j], sizeof(a->str[j - 1]) - 1);
+            a->str[j - 1][sizeof(a->str[j - 1]) - 1] = '\0';
+
+            strncpy(a->str[j], tmp, sizeof(a->str[j]) - 1);
+            a->str[j][sizeof(a->str[j]) - 1] = '\0';
+
+            aux = a->len[j - 1];
+            a->len[j - 1] = a->len[j];
+            a->len[j] = aux;
+            --j;
+        }
+    }
 }

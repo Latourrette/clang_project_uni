@@ -104,6 +104,7 @@ void createStringElementsArrayAndFill(StringElementsArray *si, int N, char **str
 void freeStringElementsArray(StringElementsArray *si) {
     free(si->str);
     free(si->len);
+    free(si);
 }
 
 void printStringElementsArray(StringElementsArray *a) {

@@ -15,4 +15,5 @@
 void msdSortClient(StringElementsArray * a, StringElementsArray * aux);
 int charAt(StringElementsArray *a, int i, int d);
 void msdSort(StringElementsArray *a, StringElementsArray *aux, int lo, int hi, int d);
+void insertionSort(StringElementsArray *a);
 #endif //PROJETO_STRINGSORT_H
