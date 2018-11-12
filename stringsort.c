@@ -61,7 +61,7 @@ void msdSort(StringElementsArray *a, StringElementsArray *aux, int lo, int hi, i
 
 void insertionSort(StringElementsArray *a) {
     int aux;
-    char tmp[MAXSEARCH];
+    char tmp[BUFFER];
 
     for (int i = 1; i < a->N; i++) {
         int j = i;

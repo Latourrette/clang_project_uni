@@ -8,8 +8,11 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+#include <stdbool.h>
+
 /*Maximum size for word search*/
-#define MAXSEARCH 10
+#define ROW 10
+#define COL 10
 #define MAXWORDS  5
 #define BUFFER 10000
 
@@ -18,8 +21,8 @@
  *  Structure used for LSD, MSD and other
  */
 typedef struct {
-    char ** str; // array of strings
-    int * len; // array of string lengths
+    char **str; // array of strings
+    int *len; // array of string lengths
     int N; // number of strings (size of array of strings)
 } StringElementsArray;
 
@@ -90,5 +93,14 @@ void printStringElementsArray(StringElementsArray *a);
  * @param si
  */
 void freeStringElementsArray(StringElementsArray *si);
+
+void wordSearchFunc(char **wordSearch, char *word, int col, int row);
+
+void wordSearchRecursive(char **wordSearch, char *word, int x, int y, int z);
+
+void findWords(char **wordSearch, char *word);
+void recursiveSearch(char **wordSearch,
+                     int currentRow, int currentCol, int prevRow, int prevCol, char *word, int index, int n);
+bool isvalid(int row, int col, int prevRow, int prevCol);
 
 #endif //PROJETO_FUNCTIONS_H

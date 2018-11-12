@@ -5,8 +5,8 @@
 int main() {
 
     //char **wordsearch = generateWordSearch(MAXSEARCH,MAXSEARCH);
-    char **wordsearch2 = readFromFile(MAXSEARCH,MAXSEARCH);
-    char **bagOfWords = createManuallyBagOfWords(MAXWORDS,MAXSEARCH);
+    char **wordsearch2 = readFromFile(ROW,COL);
+    char **bagOfWords = createManuallyBagOfWords(MAXWORDS,BUFFER);
     //char **bagOfWords2 = readFromFileBagOfWords(MAXWORDS,MAXSEARCH);
 
     //printMatrix(wordsearch, MAXSEARCH,MAXSEARCH);
@@ -16,7 +16,7 @@ int main() {
     //printf("\n\n");
     //printBagOfWords(bagOfWords2,MAXWORDS);*/
 
-    StringElementsArray* bag = (StringElementsArray*) malloc(sizeof(StringElementsArray));
+   /* StringElementsArray* bag = (StringElementsArray*) malloc(sizeof(StringElementsArray));
     StringElementsArray* aux = (StringElementsArray*) malloc(sizeof(StringElementsArray));
 
     createStringElementsArrayAndFill(bag,MAXWORDS,bagOfWords);
@@ -26,7 +26,11 @@ int main() {
     msdSortClient(bag,aux);
     printStringElementsArray(bag);
     freeStringElementsArray(bag);
-    free(bagOfWords);
+    free(bagOfWords);*/
 
+    /*for (int i = 0; i <  MAXWORDS; ++i) {
+        findWords(wordsearch2,bagOfWords[i]);
+    }*/
+    findWords(wordsearch2,"PORTO");
     return 0;
 }
