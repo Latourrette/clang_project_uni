@@ -128,33 +128,37 @@ void printStringElementsArray(StringElementsArray *a) {
 }
 
 
-// Program to find all occurrences of the word in
-// a matrix
 
-// check whether given cell (row, col) is a valid
-// cell or not.
-bool isvalid(int row, int col, int prevRow, int prevCol) {
+
+bool isvalid(int row, int col) {
     // return true if row number and column number
     // is in range
-    return (row >= 0) && (row < ROW) && (col >= 0) && (col < COL) && !(row == prevRow && col == prevCol);
+    return (row >= 0) && (row < ROW) && (col >= 0) && (col < COL);
 }
 
 void findWords(char **wordSearch, char *word) {
 
+    int **pos = (int **) malloc(sizeof(int *) * BUFFER);
+    for (int k = 0; k < BUFFER; ++k) {
+        pos[k] = (int *) malloc(sizeof(int) * strlen(word) * 2 + 1);
+    }
+
+
     for (int i = 0; i < ROW; ++i) {
         for (int j = 0; j < COL; ++j) {
             if (wordSearch[i][j] == word[0]) {
-                recursiveSearch(wordSearch, i, j, -1, -1, word, 0, strlen(word) - 1);
+                recursiveSearch(wordSearch, i, j, word, 0, strlen(word) - 1, pos, 0);
             }
         }
     }
+    free(pos);
 }
 
-int aux[10][10];
 void recursiveSearch(char **wordSearch,
-                     int currentRow, int currentCol, int prevRow, int prevCol, char *word, int index, int n) {
+                     int currentRow, int currentCol, char *word, int index, int n, int **pos,
+                     int d) {
 
-    int directions[8][2] = {{-1, -1}, // NW
+    int directions[8][3] = {{-1, -1}, // NW
                             {-1, 0},  // N
                             {-1, 1},  // NE
                             {0,  -1},  // W
@@ -163,23 +167,35 @@ void recursiveSearch(char **wordSearch,
                             {1,  0},  // S
                             {1,  1},  // SE
     };
+    char dir[8][3] = {
+            {"NW"},
+            {"N"},
+            {"NE"},
+            {"W"},
+            {"E"},
+            {"SW"},
+            {"S"},
+            {"SE"},
+    };
 
     if (index > n || wordSearch[currentRow][currentCol] != word[index]) {
         return;
     }
 
-    //append current character position to path
-    //path += string(1, word[index]) + "(" + to_string(row)+ ", " + to_string(col) + ") ";
-    aux[index][0] = currentRow;
-    aux[index][1] = currentCol;
+    pos[index][0] = currentRow;
+    pos[index][1] = currentCol;
+    pos[index][2] = d;
+
     // current character matches with the last character
     // in the word
-    if (index == n)
-    {
+    if (index == n) {
         printf("%s ", word);
-        for (int i = 0; i <= n; ++i)
-        {
-           printf("->[%d, %d]",aux[i][0],aux[i][1]);
+        for (int i = 0; i <= n; ++i) {
+            printf("->[%d, %d]", pos[i][0], pos[i][1]);
+        }
+        printf(" Directions");
+        for (int i = 1; i <= n; ++i) {
+            printf("-> [%s]", dir[pos[i][2]]);
         }
         printf("\n");
         return;
@@ -187,9 +203,9 @@ void recursiveSearch(char **wordSearch,
 
 
     for (int i = 0; i < 8; ++i) {
-        if (isvalid(currentRow + directions[i][0], currentCol + directions[i][1], prevRow, prevCol)) {
+        if (isvalid(currentRow + directions[i][0], currentCol + directions[i][1])) {
             recursiveSearch(wordSearch, currentRow + directions[i][0], currentCol + directions[i][1],
-                            currentRow, currentCol, word, index + 1, n);
+                            word, index + 1, n, pos, i);
         }
     }
 }

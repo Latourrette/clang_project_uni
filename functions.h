@@ -14,7 +14,7 @@
 #define ROW 10
 #define COL 10
 #define MAXWORDS  5
-#define BUFFER 10000
+#define BUFFER 1000
 
 
 /**
@@ -99,8 +99,10 @@ void wordSearchFunc(char **wordSearch, char *word, int col, int row);
 void wordSearchRecursive(char **wordSearch, char *word, int x, int y, int z);
 
 void findWords(char **wordSearch, char *word);
-void recursiveSearch(char **wordSearch,
-                     int currentRow, int currentCol, int prevRow, int prevCol, char *word, int index, int n);
-bool isvalid(int row, int col, int prevRow, int prevCol);
+
+void recursiveSearch(
+        char **wordSearch, int currentRow, int currentCol, char *word, int index, int n, int **pos, int d);
+
+bool isvalid(int row, int col);
 
 #endif //PROJETO_FUNCTIONS_H

@@ -28,9 +28,8 @@ int main() {
     freeStringElementsArray(bag);
     free(bagOfWords);*/
 
-    /*for (int i = 0; i <  MAXWORDS; ++i) {
+    for (int i = 0; i <  MAXWORDS; ++i) {
         findWords(wordsearch2,bagOfWords[i]);
-    }*/
-    findWords(wordsearch2,"PORTO");
+    }
     return 0;
 }
