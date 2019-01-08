@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/home/latourrette/Documents/lp1/projetolp1/functions.c" "/home/latourrette/Documents/lp1/projetolp1/cmake-build-debug/CMakeFiles/projeto.dir/functions.c.o"
+  "/home/latourrette/Documents/lp1/projetolp1/functionsPhase2.c" "/home/latourrette/Documents/lp1/projetolp1/cmake-build-debug/CMakeFiles/projeto.dir/functionsPhase2.c.o"
   "/home/latourrette/Documents/lp1/projetolp1/main.c" "/home/latourrette/Documents/lp1/projetolp1/cmake-build-debug/CMakeFiles/projeto.dir/main.c.o"
   "/home/latourrette/Documents/lp1/projetolp1/stringsort.c" "/home/latourrette/Documents/lp1/projetolp1/cmake-build-debug/CMakeFiles/projeto.dir/stringsort.c.o"
   )

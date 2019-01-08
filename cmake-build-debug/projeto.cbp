@@ -27,16 +27,6 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/latourrette/Documents/lp1/projetolp1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/home/latourrette/Documents/lp1/projetolp1/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/latourrette/Documents/lp1/projetolp1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/latourrette/Documents/lp1/projetolp1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/latourrette/Documents/lp1/projetolp1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/latourrette/Documents/lp1/projetolp1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="projeto">
 				<Option output="/home/latourrette/Documents/lp1/projetolp1/cmake-build-debug/projeto" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/latourrette/Documents/lp1/projetolp1/cmake-build-debug"/>
@@ -75,11 +65,27 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/latourrette/Documents/lp1/projetolp1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/latourrette/Documents/lp1/projetolp1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/latourrette/Documents/lp1/projetolp1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/latourrette/Documents/lp1/projetolp1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/latourrette/Documents/lp1/projetolp1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/latourrette/Documents/lp1/projetolp1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
 		<Unit filename="/home/latourrette/Documents/lp1/projetolp1/functions.c">
 			<Option target="projeto"/>
 		</Unit>
 		<Unit filename="/home/latourrette/Documents/lp1/projetolp1/functions.h">
+			<Option target="projeto"/>
+		</Unit>
+		<Unit filename="/home/latourrette/Documents/lp1/projetolp1/functionsPhase2.c">
+			<Option target="projeto"/>
+		</Unit>
+		<Unit filename="/home/latourrette/Documents/lp1/projetolp1/functionsPhase2.h">
 			<Option target="projeto"/>
 		</Unit>
 		<Unit filename="/home/latourrette/Documents/lp1/projetolp1/main.c">

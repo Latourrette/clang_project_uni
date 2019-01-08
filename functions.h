@@ -1,6 +1,3 @@
-//
-// Created by latourrette on 26-10-2018.
-//
 
 #ifndef PROJETO_FUNCTIONS_H
 #define PROJETO_FUNCTIONS_H
@@ -8,7 +5,8 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-#include <stdbool.h>
+#include<stdbool.h>
+#include"stringsort.h"
 
 /*Maximum size for word search*/
 #define ROW 10
@@ -18,25 +16,16 @@
 
 
 /**
- *  Structure used for LSD, MSD and other
- */
-typedef struct {
-    char **str; // array of strings
-    int *len; // array of string lengths
-    int N; // number of strings (size of array of strings)
-} StringElementsArray;
-
-/**
  * Leitura da matriz a partir de um ficheiro de texto
  * @return
  */
-char **readFromFile(int col, int row);
+char **readFromFile(int row, int col);
 
 /**
  * Leitura da matriz manualmente
  * @return
  */
-char **generateWordSearch(int col, int row);
+char **generateWordSearch(int row, int col);
 
 /**
  *
@@ -44,7 +33,7 @@ char **generateWordSearch(int col, int row);
  * @param row
  * @return
  */
-char **createManuallyBagOfWords(int col, int row);
+char **createManuallyBagOfWords(int row, int col);
 
 /**
  *
@@ -52,47 +41,21 @@ char **createManuallyBagOfWords(int col, int row);
  * @param row
  * @return
  */
-char **readFromFileBagOfWords(int col, int row);
+char **readFromFileBagOfWords(int row, int col);
 
 /**
  *
  * @param matrix
  */
-void printMatrix(char **matrix, int col, int row);
+void printMatrix(char **matrix, int row, int col);
 
 /**
  *
  * @param matrix
  * @param col
  */
-void printBagOfWords(char **matrix, int col);
+void printBagOfWords(char **matrix, int row);
 
-/**
- *
- * @param si
- * @param N
- */
-void createStringElementsArray(StringElementsArray *si, int N);
-
-/**
- *
- * @param si
- * @param N
- * @param strings
- */
-void createStringElementsArrayAndFill(StringElementsArray *si, int N, char **strings);
-
-/**
- *
- * @param a
- */
-void printStringElementsArray(StringElementsArray *a);
-
-/**
- *
- * @param si
- */
-void freeStringElementsArray(StringElementsArray *si);
 
 void wordSearchFunc(char **wordSearch, char *word, int col, int row);
 

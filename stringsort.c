@@ -1,9 +1,37 @@
-//
-// Created by latourrette on 29-10-2018.
-//
 
-#include <assert.h>
+
 #include "stringsort.h"
+
+
+void createStringElementsArray(StringElementsArray *si, int N) {
+    si->N = N;
+    si->str = (char **) malloc(sizeof(char *) * N);
+    si->len = (int *) malloc(sizeof(int) * N);
+}
+
+void createStringElementsArrayAndFill(StringElementsArray *si, int N, char **strings) {
+    int i;
+    createStringElementsArray(si, N);
+    for (i = 0; i < N; i++) {
+        si->str[i] = (char *) malloc(strlen(strings[i]) + 1);
+        strcpy(si->str[i], strings[i]);
+        si->len[i] = (int) strlen(strings[i]);
+    }
+}
+
+void freeStringElementsArray(StringElementsArray *si) {
+    free(si->str);
+    free(si->len);
+    free(si);
+}
+
+void printStringElementsArray(StringElementsArray *a) {
+    int i;
+    printf("\n-------------\nStringElementsArray (N=%d):\n", a->N);
+    for (i = 0; i < a->N; i++)
+        printf("\t%s\t(%d)\n", a->str[i], a->len[i]);
+    printf("-------------\n");
+}
 
 void msdSortClient(StringElementsArray *a, StringElementsArray *aux) {
     for (int i = 0; i < a->N; i++) {
