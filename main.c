@@ -8,37 +8,25 @@ void printSubMenu();
 
 int main() {
 
-    //char **wordsearch = generateWordSearch(MAXSEARCH,MAXSEARCH);
-    char **wordsearch1 = readFromFile(ROW,COL);
-    //char **bagOfWords = createManuallyBagOfWords(MAXWORDS,BUFFER);
-    char **bagOfWords2 = readFromFileBagOfWords(MAXWORDS,BUFFER);
+    char **wordsearch = readFromFile(ROW,COL);
+    char **bagOfWords = readFromFileBagOfWords(MAXWORDS,BUFFER);
 
-    for (int i = 0; i < MAXWORDS; ++i) {
-           findWords(wordsearch1,bagOfWords2[i]);
-    }
 
-    //printMatrix(wordsearch, MAXSEARCH,MAXSEARCH);
-    //printf("\n\n");
-    //printMatrix(wordsearch2, MAXSEARCH,MAXSEARCH);
-    //printBagOfWords(bagOfWords,MAXWORDS);
-    //printf("\n\n");
-    //printBagOfWords(bagOfWords2,MAXWORDS);*/
+//     StringElementsArray* bag = (StringElementsArray*) malloc(sizeof(StringElementsArray));
+//     StringElementsArray* aux = (StringElementsArray*) malloc(sizeof(StringElementsArray));
+//
+//     createStringElementsArrayAndFill(bag,MAXWORDS,bagOfWords);
+//     createStringElementsArray(aux,MAXWORDS);
+//     printStringElementsArray(bag);
+//
+//     msdSortClient(bag,aux);
+//     printStringElementsArray(bag);
+//     freeStringElementsArray(bag);
+//     free(bagOfWords);
 
-    /* StringElementsArray* bag = (StringElementsArray*) malloc(sizeof(StringElementsArray));
-     StringElementsArray* aux = (StringElementsArray*) malloc(sizeof(StringElementsArray));
-
-     createStringElementsArrayAndFill(bag,MAXWORDS,bagOfWords);
-     createStringElementsArray(aux,MAXWORDS);
-     printStringElementsArray(bag);
-
-     msdSortClient(bag,aux);
-     printStringElementsArray(bag);
-     freeStringElementsArray(bag);
-     free(bagOfWords);*/
-
-    /*for (int i = 0; i <  MAXWORDS; ++i) {
-        findWords(wordsearch2,bagOfWords[i]);
-    }*/
+//    for (int i = 0; i <  MAXWORDS; ++i) {
+//        findWords(wordsearch,bagOfWords[i]);
+//    }
 
 
     /*char **bagOfWords;
@@ -109,15 +97,16 @@ int main() {
         }
     }*/
 
-    char **bagOfWords = readFromFileBagOfWords(MAXWORDS, BUFFER);
+    //char **bagOfWords = readFromFileBagOfWords(MAXWORDS, BUFFER);
     //printBagOfWords(bagOfWords,MAXWORDS);
 
-    struct Queue q;
-    initQueue(&q);
-    pushWords(&q, bagOfWords, MAXWORDS);
+//    struct Queue q;
+//    initQueue(&q);
+//    pushWords(&q, bagOfWords, MAXWORDS);
+//
+//    struct Node *n = NULL;
+//    clientMergeSort(&q,n);
 
-    //printList(q.front);
-    //mergeSort(q.front);
 
     char **wordSearch = readFromFile(ROW, COL);
     //printMatrix(wordSearch,ROW,COL);
@@ -128,22 +117,21 @@ int main() {
         findWordsStructs(&ws, q.front->word);
         q.front = q.front->nextWord;
     }*/
-    /*struct Position p;
-    p.n=5;
-    p.x=3;
-    p.y=4;
-    p.movements = (char**)malloc(sizeof(char*)*5);
-    for (int i = 0; i < 5; ++i) {
-        p.movements[i] =(char*) malloc(3);
-    }
-    p.movements[0]="E";
-    p.movements[1]="E";
-    p.movements[2]="N";
-    p.movements[3]="NW";
-    p.movements[4]="W";
-    char *aaa = path(&ws,&p);*/
-    //printWordSearch(&ws);
+    struct Position p;
+    char ** movements;
 
+    movements = (char**)malloc(sizeof(char*)*5);
+    for (int i = 0; i < 5; ++i) {
+        movements[i] =(char*) malloc(3);
+    }
+
+    movements[0]="E";
+    movements[1]="E";
+    movements[2]="N";
+    movements[3]="NW";
+    movements[4]="W";
+    clientPathFind(&p,5,3,4,movements);
+    char *aaa = path(&ws,&p);
     return 0;
 }
 

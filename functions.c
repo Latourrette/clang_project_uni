@@ -96,8 +96,7 @@ char **readFromFileBagOfWords(int row, int col) {
 }
 
 bool isvalid(int row, int col) {
-    // return true if row number and column number
-    // is in range
+    // return true if row number and column number is in range
     return (row >= 0) && (row < ROW) && (col >= 0) && (col < COL);
 }
 
@@ -155,9 +154,8 @@ void recursiveSearch(char **wordSearch,
     // in the word
     if (index == n) {
         printf("%s ", word);
-        for (int i = 0; i <= n; ++i) {
-            printf("->[%d, %d]", pos[i][0], pos[i][1]);
-        }
+        printf("[%d, %d]", pos[0][0], pos[0][1]);
+        printf("->[%d, %d]", pos[n][0], pos[n][1]);
         printf(" Directions");
         for (int i = 1; i <= n; ++i) {
             printf("-> [%s]", dir[pos[i][2]]);

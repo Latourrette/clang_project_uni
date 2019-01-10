@@ -1,6 +1,17 @@
-cmake_minimum_required(VERSION 3.12)
-project(projeto C)
+cmake_minimum_required(VERSION 3.13)
+project(projetolp1 C)
 
-set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_STANDARD 11)
 
-add_executable(projeto main.c functions.c functions.h stringsort.c stringsort.h functionsPhase2.c functionsPhase2.h)
+include_directories(.)
+
+add_executable(projetolp1
+        functions.c
+        functions.h
+        functionsPhase2.c
+        functionsPhase2.h
+        main.c
+        mergeSortLinkedList.c
+        mergeSortLinkedList.h
+        stringsort.c
+        stringsort.h)

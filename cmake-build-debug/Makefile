@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named projeto
+# Target rules for targets named projetolp1
 
 # Build rule for target.
-projeto: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 projeto
-.PHONY : projeto
+projetolp1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 projetolp1
+.PHONY : projetolp1
 
 # fast build rule for target.
-projeto/fast:
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/build
-.PHONY : projeto/fast
+projetolp1/fast:
+	$(MAKE) -f CMakeFiles/projetolp1.dir/build.make CMakeFiles/projetolp1.dir/build
+.PHONY : projetolp1/fast
 
 functions.o: functions.c.o
 
@@ -129,7 +129,7 @@ functions.o: functions.c.o
 
 # target to build an object file
 functions.c.o:
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/functions.c.o
+	$(MAKE) -f CMakeFiles/projetolp1.dir/build.make CMakeFiles/projetolp1.dir/functions.c.o
 .PHONY : functions.c.o
 
 functions.i: functions.c.i
@@ -138,7 +138,7 @@ functions.i: functions.c.i
 
 # target to preprocess a source file
 functions.c.i:
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/functions.c.i
+	$(MAKE) -f CMakeFiles/projetolp1.dir/build.make CMakeFiles/projetolp1.dir/functions.c.i
 .PHONY : functions.c.i
 
 functions.s: functions.c.s
@@ -147,7 +147,7 @@ functions.s: functions.c.s
 
 # target to generate assembly for a file
 functions.c.s:
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/functions.c.s
+	$(MAKE) -f CMakeFiles/projetolp1.dir/build.make CMakeFiles/projetolp1.dir/functions.c.s
 .PHONY : functions.c.s
 
 functionsPhase2.o: functionsPhase2.c.o
@@ -156,7 +156,7 @@ functionsPhase2.o: functionsPhase2.c.o
 
 # target to build an object file
 functionsPhase2.c.o:
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/functionsPhase2.c.o
+	$(MAKE) -f CMakeFiles/projetolp1.dir/build.make CMakeFiles/projetolp1.dir/functionsPhase2.c.o
 .PHONY : functionsPhase2.c.o
 
 functionsPhase2.i: functionsPhase2.c.i
@@ -165,7 +165,7 @@ functionsPhase2.i: functionsPhase2.c.i
 
 # target to preprocess a source file
 functionsPhase2.c.i:
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/functionsPhase2.c.i
+	$(MAKE) -f CMakeFiles/projetolp1.dir/build.make CMakeFiles/projetolp1.dir/functionsPhase2.c.i
 .PHONY : functionsPhase2.c.i
 
 functionsPhase2.s: functionsPhase2.c.s
@@ -174,7 +174,7 @@ functionsPhase2.s: functionsPhase2.c.s
 
 # target to generate assembly for a file
 functionsPhase2.c.s:
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/functionsPhase2.c.s
+	$(MAKE) -f CMakeFiles/projetolp1.dir/build.make CMakeFiles/projetolp1.dir/functionsPhase2.c.s
 .PHONY : functionsPhase2.c.s
 
 main.o: main.c.o
@@ -183,7 +183,7 @@ main.o: main.c.o
 
 # target to build an object file
 main.c.o:
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/main.c.o
+	$(MAKE) -f CMakeFiles/projetolp1.dir/build.make CMakeFiles/projetolp1.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -192,7 +192,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/main.c.i
+	$(MAKE) -f CMakeFiles/projetolp1.dir/build.make CMakeFiles/projetolp1.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -201,8 +201,35 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/main.c.s
+	$(MAKE) -f CMakeFiles/projetolp1.dir/build.make CMakeFiles/projetolp1.dir/main.c.s
 .PHONY : main.c.s
+
+mergeSortLinkedList.o: mergeSortLinkedList.c.o
+
+.PHONY : mergeSortLinkedList.o
+
+# target to build an object file
+mergeSortLinkedList.c.o:
+	$(MAKE) -f CMakeFiles/projetolp1.dir/build.make CMakeFiles/projetolp1.dir/mergeSortLinkedList.c.o
+.PHONY : mergeSortLinkedList.c.o
+
+mergeSortLinkedList.i: mergeSortLinkedList.c.i
+
+.PHONY : mergeSortLinkedList.i
+
+# target to preprocess a source file
+mergeSortLinkedList.c.i:
+	$(MAKE) -f CMakeFiles/projetolp1.dir/build.make CMakeFiles/projetolp1.dir/mergeSortLinkedList.c.i
+.PHONY : mergeSortLinkedList.c.i
+
+mergeSortLinkedList.s: mergeSortLinkedList.c.s
+
+.PHONY : mergeSortLinkedList.s
+
+# target to generate assembly for a file
+mergeSortLinkedList.c.s:
+	$(MAKE) -f CMakeFiles/projetolp1.dir/build.make CMakeFiles/projetolp1.dir/mergeSortLinkedList.c.s
+.PHONY : mergeSortLinkedList.c.s
 
 stringsort.o: stringsort.c.o
 
@@ -210,7 +237,7 @@ stringsort.o: stringsort.c.o
 
 # target to build an object file
 stringsort.c.o:
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/stringsort.c.o
+	$(MAKE) -f CMakeFiles/projetolp1.dir/build.make CMakeFiles/projetolp1.dir/stringsort.c.o
 .PHONY : stringsort.c.o
 
 stringsort.i: stringsort.c.i
@@ -219,7 +246,7 @@ stringsort.i: stringsort.c.i
 
 # target to preprocess a source file
 stringsort.c.i:
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/stringsort.c.i
+	$(MAKE) -f CMakeFiles/projetolp1.dir/build.make CMakeFiles/projetolp1.dir/stringsort.c.i
 .PHONY : stringsort.c.i
 
 stringsort.s: stringsort.c.s
@@ -228,7 +255,7 @@ stringsort.s: stringsort.c.s
 
 # target to generate assembly for a file
 stringsort.c.s:
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/stringsort.c.s
+	$(MAKE) -f CMakeFiles/projetolp1.dir/build.make CMakeFiles/projetolp1.dir/stringsort.c.s
 .PHONY : stringsort.c.s
 
 # Help Target
@@ -238,7 +265,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... projeto"
+	@echo "... projetolp1"
 	@echo "... edit_cache"
 	@echo "... functions.o"
 	@echo "... functions.i"
@@ -249,6 +276,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... mergeSortLinkedList.o"
+	@echo "... mergeSortLinkedList.i"
+	@echo "... mergeSortLinkedList.s"
 	@echo "... stringsort.o"
 	@echo "... stringsort.i"
 	@echo "... stringsort.s"

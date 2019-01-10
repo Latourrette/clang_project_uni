@@ -181,53 +181,6 @@ void printWordSearch(struct WordSearch *ws) {
     }
 }
 
-/**
- * Returns a pointer to a node near the middle of the list,
- * after having truncated the original list before that point.
- */
-static struct WordList *bisectList(struct WordList *head) {
-    /* The fast pointer moves twice as fast as the slow pointer. */
-    /* The prev pointer points to the node preceding the slow pointer. */
-    struct WordList *fast = head, *slow = head, *prev = NULL;
-
-    while (fast != NULL && fast->nextWord != NULL) {
-        fast = fast->nextWord->nextWord;
-        prev = slow;
-        slow = slow->nextWord;
-    }
-
-    if (prev != NULL) {
-        prev->nextWord = NULL;
-    }
-    return slow;
-}
-
-static struct WordList *mergeList(struct WordList *list1, struct WordList *list2) {
-    struct WordList dummy_head = {0, NULL}, *tail = &dummy_head;
-
-    while ((list1 != NULL) && (list2 != NULL)) {
-        struct WordList **min = (strcmp(list1->word, list2->word) < 0) ? &list1 : &list2;
-        struct WordList *next = (*min)->nextWord;
-        tail = tail->nextWord = *min;
-        *min = next;
-    }
-    tail->nextWord = list1 ? list1 : list2;
-    return dummy_head.nextWord;
-}
-
-struct WordList *mergeSort(struct WordList *head) {
-    struct WordList *list1 = head;
-    if ((list1 == NULL) || (list1->nextWord == NULL)) {
-        return list1;
-    }
-
-    struct WordList *list2 = bisectList(list1);
-
-    //printList(list1);
-    printList(list2);
-
-    return mergeList(mergeSort(list1), mergeSort(list2));
-}
 
 void insertIntoWS(struct WordSearch *ws, char **wordSearch) {
     struct WordSearch *aux = ws;
@@ -512,4 +465,26 @@ char *path(struct WordSearch *ws, struct Position *p) {
     }
     printf("%s", pathString);
     return pathString;
+}
+
+void  clientPathFind(struct Position *p, int n, int x, int y, char**movements){
+    p->n=n;
+    p->x=x;
+    p->y=y;
+    p->movements = (char**)malloc(sizeof(char*)*n);
+    for (int i = 0; i < n; ++i) {
+        p->movements[i] =(char*) malloc(n);
+        strcpy(p->movements[i],movements[i]);
+    }
+
+}
+
+void clientMergeSort(struct Queue *q,struct Node *n){
+    int i = 0;
+    while(q->front!=NULL){
+        addElement(&n,q->front->word,i++);;
+        q->front = q->front->nextWord;
+    }
+    MergeSort(&n,1);
+    printListNode(n);
 }
